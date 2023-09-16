@@ -1,15 +1,13 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import HomePage from '../views/HomePage.vue'
-
+import MemoriesPage from '../pages/memoriesPage.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/memories'
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: HomePage
+    path: '/memories',
+    component: MemoriesPage
   }
 ]
 
