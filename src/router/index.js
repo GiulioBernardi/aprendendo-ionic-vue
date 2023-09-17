@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import MemoriesPage from '../pages/memoriesPage.vue';
+import MemoriesPage from '../pages/MemoriesPage.vue';
+import { compile } from 'vue';
 const routes = [
   {
     path: '/',
@@ -8,6 +9,10 @@ const routes = [
   {
     path: '/memories',
     component: MemoriesPage
+  },
+  {
+    path: '/memories/:id',
+    component: () => import('../pages/MemoriesDetails.vue')
   }
 ]
 
